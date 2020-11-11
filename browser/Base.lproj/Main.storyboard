@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="F3Y-ol-3D0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dhy-JM-2qM">
+            <objects>
+                <tabBarController id="F3Y-ol-3D0" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BKW-zR-aNH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6W4-Kh-bpM"/>
+                        <segue destination="m7W-Zq-cQG" kind="relationship" relationship="viewControllers" id="H2W-rX-C4z"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Zh-u9-WuY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1132" y="113"/>
+        </scene>
+        <!--normal-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WebViewController" customModule="browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VLV-un-xxu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tn2-Tu-LWX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ZK-fC-Slq">
+                                <rect key="frame" x="0.0" y="50" width="414" height="796"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6D-XW-lhV" userLabel="topbar">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TOL-JU-LRQ">
+                                        <rect key="frame" x="20" y="8" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="TOL-JU-LRQ" firstAttribute="leading" secondItem="P6D-XW-lhV" secondAttribute="leading" constant="20" symbolic="YES" id="3wq-83-vJ2"/>
+                                    <constraint firstItem="TOL-JU-LRQ" firstAttribute="centerY" secondItem="P6D-XW-lhV" secondAttribute="centerY" id="HPR-Br-Q5v"/>
+                                    <constraint firstItem="TOL-JU-LRQ" firstAttribute="centerX" secondItem="P6D-XW-lhV" secondAttribute="centerX" id="Z5t-2I-7eB"/>
+                                    <constraint firstAttribute="height" constant="50" id="jK3-40-Xnu"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="et7-wf-Oul" userLabel="bottombar">
+                                <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mi3-3h-DcA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6ZK-fC-Slq" secondAttribute="trailing" id="7CQ-I6-Hof"/>
+                            <constraint firstItem="P6D-XW-lhV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bxk-VE-Kry"/>
+                            <constraint firstItem="et7-wf-Oul" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FlP-Dj-IAk"/>
+                            <constraint firstItem="6ZK-fC-Slq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IWt-9K-yFg"/>
+                            <constraint firstAttribute="trailing" secondItem="et7-wf-Oul" secondAttribute="trailing" id="RCz-KA-Pp2"/>
+                            <constraint firstItem="P6D-XW-lhV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WhN-eF-CwM"/>
+                            <constraint firstAttribute="trailing" secondItem="P6D-XW-lhV" secondAttribute="trailing" id="dTA-KH-5LT"/>
+                            <constraint firstItem="6ZK-fC-Slq" firstAttribute="top" secondItem="P6D-XW-lhV" secondAttribute="bottom" id="mhN-zo-6Fr"/>
+                            <constraint firstItem="et7-wf-Oul" firstAttribute="top" secondItem="6ZK-fC-Slq" secondAttribute="bottom" id="tVI-jW-P2u"/>
+                            <constraint firstAttribute="bottom" secondItem="et7-wf-Oul" secondAttribute="bottom" id="zEo-zz-0Un"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="normal" id="4Bm-Hg-qTi"/>
+                    <connections>
+                        <outlet property="addressBarTF" destination="TOL-JU-LRQ" id="UpO-ko-KjD"/>
+                        <outlet property="webview" destination="6ZK-fC-Slq" id="rR9-7m-Teb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226.08695652173915" y="112.5"/>
+        </scene>
+        <!--incognito-->
+        <scene sceneID="Blh-cr-UVv">
+            <objects>
+                <viewController id="m7W-Zq-cQG" customClass="WebViewController" customModule="browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PSE-hK-1JF"/>
+                        <viewControllerLayoutGuide type="bottom" id="PWL-IC-kZv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nH3-fP-9d5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjP-ff-3Dd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kjP-ff-3Dd" firstAttribute="top" secondItem="nH3-fP-9d5" secondAttribute="top" id="3AI-i2-uhB"/>
+                            <constraint firstItem="kjP-ff-3Dd" firstAttribute="leading" secondItem="nH3-fP-9d5" secondAttribute="leading" id="b6s-cg-84m"/>
+                            <constraint firstAttribute="trailing" secondItem="kjP-ff-3Dd" secondAttribute="trailing" id="noI-Oq-6n6"/>
+                            <constraint firstAttribute="bottom" secondItem="kjP-ff-3Dd" secondAttribute="bottom" id="s7Z-T3-Xsa"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="incognito" id="8zR-G9-ApN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Akz-Du-fXi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226" y="859"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
