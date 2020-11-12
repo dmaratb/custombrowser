@@ -12,7 +12,6 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -38,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     lazy var persistentContainer: NSPersistentContainer = {
         if #available(iOS 13.0, *) {
-            let container = NSPersistentCloudKitContainer(name: "browser")
+            let container = NSPersistentCloudKitContainer(name: "CustomBrowser")
             container.loadPersistentStores(completionHandler: { (storeDescription, error) in
                 if let error = error as NSError? {
                     // Replace this implementation with code to handle the error appropriately.
@@ -57,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
             return container
         } else {
-            let container = NSPersistentContainer(name: "browser")
+            let container = NSPersistentContainer(name: "CustomBrowser")
             container.loadPersistentStores(completionHandler: { (storeDescription, error) in
                 if let error = error as NSError? {
 

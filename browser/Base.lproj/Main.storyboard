@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="F3Y-ol-3D0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F3Y-ol-3D0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +12,14 @@
         <!--Tab Bar Controller-->
         <scene sceneID="dhy-JM-2qM">
             <objects>
-                <tabBarController id="F3Y-ol-3D0" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BKW-zR-aNH">
+                <tabBarController hidesBottomBarWhenPushed="YES" id="F3Y-ol-3D0" sceneMemberID="viewController">
+                    <tabBar key="tabBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BKW-zR-aNH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6W4-Kh-bpM"/>
-                        <segue destination="m7W-Zq-cQG" kind="relationship" relationship="viewControllers" id="H2W-rX-C4z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zh-u9-WuY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -30,105 +30,107 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WebViewController" customModule="browser" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VLV-un-xxu"/>
-                        <viewControllerLayoutGuide type="bottom" id="Tn2-Tu-LWX"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ZK-fC-Slq">
-                                <rect key="frame" x="0.0" y="50" width="414" height="796"/>
+                            <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ZK-fC-Slq">
+                                <rect key="frame" x="0.0" y="94" width="414" height="620"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6D-XW-lhV" userLabel="topbar">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TOL-JU-LRQ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TOL-JU-LRQ">
                                         <rect key="frame" x="20" y="8" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="l23-ww-mzc"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="TOL-JU-LRQ" firstAttribute="leading" secondItem="P6D-XW-lhV" secondAttribute="leading" constant="20" symbolic="YES" id="3wq-83-vJ2"/>
-                                    <constraint firstItem="TOL-JU-LRQ" firstAttribute="centerY" secondItem="P6D-XW-lhV" secondAttribute="centerY" id="HPR-Br-Q5v"/>
+                                    <constraint firstAttribute="bottom" secondItem="TOL-JU-LRQ" secondAttribute="bottom" constant="8" id="6xB-mm-qfY"/>
+                                    <constraint firstItem="TOL-JU-LRQ" firstAttribute="top" secondItem="P6D-XW-lhV" secondAttribute="top" constant="8" id="IEe-T4-8oB"/>
                                     <constraint firstItem="TOL-JU-LRQ" firstAttribute="centerX" secondItem="P6D-XW-lhV" secondAttribute="centerX" id="Z5t-2I-7eB"/>
-                                    <constraint firstAttribute="height" constant="50" id="jK3-40-Xnu"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="et7-wf-Oul" userLabel="bottombar">
-                                <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="714" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzC-1G-79F">
+                                        <rect key="frame" x="20" y="0.0" width="34" height="50"/>
+                                        <state key="normal" title="back"/>
+                                        <connections>
+                                            <action selector="goBackAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3C9-4k-jdi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCe-gO-n2d">
+                                        <rect key="frame" x="286" y="0.0" width="47" height="50"/>
+                                        <state key="normal" title="history"/>
+                                        <connections>
+                                            <action selector="showHistoryAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DNd-JV-osY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSm-of-0Ub">
+                                        <rect key="frame" x="341" y="0.0" width="53" height="50"/>
+                                        <state key="normal" title="forward"/>
+                                        <connections>
+                                            <action selector="goForwardAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ax-GI-Dab"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="bSm-of-0Ub" firstAttribute="leading" secondItem="qCe-gO-n2d" secondAttribute="trailing" constant="8" symbolic="YES" id="0x5-mz-5oQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bSm-of-0Ub" secondAttribute="trailing" constant="20" symbolic="YES" id="Hqr-J9-Ega"/>
+                                    <constraint firstItem="jzC-1G-79F" firstAttribute="top" secondItem="et7-wf-Oul" secondAttribute="top" id="KT8-VJ-e6R"/>
+                                    <constraint firstItem="bSm-of-0Ub" firstAttribute="top" secondItem="et7-wf-Oul" secondAttribute="top" id="Krl-as-VdR"/>
                                     <constraint firstAttribute="height" constant="50" id="Mi3-3h-DcA"/>
+                                    <constraint firstAttribute="bottom" secondItem="qCe-gO-n2d" secondAttribute="bottom" id="UdO-Gd-Tc2"/>
+                                    <constraint firstAttribute="bottom" secondItem="jzC-1G-79F" secondAttribute="bottom" id="bIC-Tm-oC4"/>
+                                    <constraint firstItem="qCe-gO-n2d" firstAttribute="top" secondItem="et7-wf-Oul" secondAttribute="top" id="dw6-sh-VCE"/>
+                                    <constraint firstAttribute="bottom" secondItem="bSm-of-0Ub" secondAttribute="bottom" id="mkJ-vD-buO"/>
+                                    <constraint firstItem="jzC-1G-79F" firstAttribute="leading" secondItem="et7-wf-Oul" secondAttribute="leading" constant="20" symbolic="YES" id="sH4-YH-KT2"/>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="nQn-pi-Ofz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="6ZK-fC-Slq" secondAttribute="trailing" id="7CQ-I6-Hof"/>
-                            <constraint firstItem="P6D-XW-lhV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bxk-VE-Kry"/>
-                            <constraint firstItem="et7-wf-Oul" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FlP-Dj-IAk"/>
-                            <constraint firstItem="6ZK-fC-Slq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IWt-9K-yFg"/>
-                            <constraint firstAttribute="trailing" secondItem="et7-wf-Oul" secondAttribute="trailing" id="RCz-KA-Pp2"/>
-                            <constraint firstItem="P6D-XW-lhV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WhN-eF-CwM"/>
-                            <constraint firstAttribute="trailing" secondItem="P6D-XW-lhV" secondAttribute="trailing" id="dTA-KH-5LT"/>
+                            <constraint firstItem="nQn-pi-Ofz" firstAttribute="trailing" secondItem="6ZK-fC-Slq" secondAttribute="trailing" id="7CQ-I6-Hof"/>
+                            <constraint firstItem="et7-wf-Oul" firstAttribute="leading" secondItem="nQn-pi-Ofz" secondAttribute="leading" id="FlP-Dj-IAk"/>
+                            <constraint firstItem="6ZK-fC-Slq" firstAttribute="leading" secondItem="nQn-pi-Ofz" secondAttribute="leading" id="IWt-9K-yFg"/>
+                            <constraint firstItem="P6D-XW-lhV" firstAttribute="top" secondItem="nQn-pi-Ofz" secondAttribute="top" id="OWL-XO-vB5"/>
+                            <constraint firstItem="nQn-pi-Ofz" firstAttribute="trailing" secondItem="et7-wf-Oul" secondAttribute="trailing" id="RCz-KA-Pp2"/>
+                            <constraint firstItem="P6D-XW-lhV" firstAttribute="leading" secondItem="nQn-pi-Ofz" secondAttribute="leading" id="WhN-eF-CwM"/>
+                            <constraint firstItem="nQn-pi-Ofz" firstAttribute="trailing" secondItem="P6D-XW-lhV" secondAttribute="trailing" id="dTA-KH-5LT"/>
                             <constraint firstItem="6ZK-fC-Slq" firstAttribute="top" secondItem="P6D-XW-lhV" secondAttribute="bottom" id="mhN-zo-6Fr"/>
+                            <constraint firstItem="nQn-pi-Ofz" firstAttribute="bottom" secondItem="et7-wf-Oul" secondAttribute="bottom" id="paj-hZ-Qbx"/>
                             <constraint firstItem="et7-wf-Oul" firstAttribute="top" secondItem="6ZK-fC-Slq" secondAttribute="bottom" id="tVI-jW-P2u"/>
-                            <constraint firstAttribute="bottom" secondItem="et7-wf-Oul" secondAttribute="bottom" id="zEo-zz-0Un"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="normal" id="4Bm-Hg-qTi"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressBarTF" destination="TOL-JU-LRQ" id="UpO-ko-KjD"/>
+                        <outlet property="backBtn" destination="jzC-1G-79F" id="xtY-oD-Q7F"/>
+                        <outlet property="forwardBtn" destination="bSm-of-0Ub" id="kJK-P2-3UG"/>
                         <outlet property="webview" destination="6ZK-fC-Slq" id="rR9-7m-Teb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-226.08695652173915" y="112.5"/>
-        </scene>
-        <!--incognito-->
-        <scene sceneID="Blh-cr-UVv">
-            <objects>
-                <viewController id="m7W-Zq-cQG" customClass="WebViewController" customModule="browser" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PSE-hK-1JF"/>
-                        <viewControllerLayoutGuide type="bottom" id="PWL-IC-kZv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nH3-fP-9d5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjP-ff-3Dd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="kjP-ff-3Dd" firstAttribute="top" secondItem="nH3-fP-9d5" secondAttribute="top" id="3AI-i2-uhB"/>
-                            <constraint firstItem="kjP-ff-3Dd" firstAttribute="leading" secondItem="nH3-fP-9d5" secondAttribute="leading" id="b6s-cg-84m"/>
-                            <constraint firstAttribute="trailing" secondItem="kjP-ff-3Dd" secondAttribute="trailing" id="noI-Oq-6n6"/>
-                            <constraint firstAttribute="bottom" secondItem="kjP-ff-3Dd" secondAttribute="bottom" id="s7Z-T3-Xsa"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="incognito" id="8zR-G9-ApN"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Akz-Du-fXi" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-226" y="859"/>
         </scene>
     </scenes>
     <resources>
