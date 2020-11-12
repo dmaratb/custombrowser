@@ -11,16 +11,15 @@ import WebKit
 class WebViewController: UIViewController, WKNavigationDelegate, UITextFieldDelegate {
 
     // MARK: UI
-
-
-
     @IBOutlet weak var addressBarTF: UITextField!
     @IBOutlet weak var webview: WKWebView!
-    @IBOutlet weak var backBtn: UIButton!
 
+    @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var forwardBtn: UIButton!
 
     // MARK: Data
+    let homePageAddr = UserDefaults.standard.string(forKey: "home_page_address") ?? "https://www.google.com/"
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -32,7 +31,7 @@ class WebViewController: UIViewController, WKNavigationDelegate, UITextFieldDele
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
 
-        let defaultUrl = URL(string: "https://www.google.com")!
+        let defaultUrl = URL(string: homePageAddr)!
         let request = URLRequest(url: defaultUrl)
         webview.load(request)
     }
@@ -54,22 +53,45 @@ class WebViewController: UIViewController, WKNavigationDelegate, UITextFieldDele
             forwardBtn.isEnabled = false
         }
 
+        // try to save if needed
+        let urlStr = webView.url?.absoluteString
+        if urlStr?.caseInsensitiveCompare(homePageAddr) != .orderedSame {
+            let historyItem = HistoryItem(context: context)
+            historyItem.title = webView.title
+            historyItem.url = urlStr
+            historyItem.date = Date()
+
+            do {
+                try context.save()
+            } catch {
+                // failed to save context
+            }
+        }
+
     }
 
 
     // MARK: Textfield
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        /*
-         place for search or goto url logic
-         */
-        if textField.text != nil && textField.text!.count > 0, let url = URL(string: "https://www.google.com/search?q=\(textField.text!)") {
-            let request = URLRequest(url: url)
-            webview.load(request)
-        } else {
-            print("empty")
-        }
 
         dismissKeyboard()
+
+        guard var inputText = textField.text else { return true }
+        inputText = inputText.trimmingCharacters(in: .whitespacesAndNewlines)
+        if inputText.count < 1 {
+            return true
+        }
+
+        inputText = inputText.replacingOccurrences(of: " ", with: "+")
+        if let query = inputText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: "https://www.google.com/search?q=\(query)") {
+
+            let request = URLRequest(url: url)
+            webview.load(request)
+
+        } else {
+            // corrupted input text
+        }
+
         return true
     }
 
@@ -88,9 +110,7 @@ class WebViewController: UIViewController, WKNavigationDelegate, UITextFieldDele
     }
 
     @IBAction func showHistoryAct(_ sender: UIButton) {
-        let mylist = webview.backForwardList
-        print("open history")
-
+        // goto history
     }
 
 }

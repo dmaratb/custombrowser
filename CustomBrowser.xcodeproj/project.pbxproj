@@ -11,12 +11,12 @@
 		A54096832558496700F13641 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54096822558496700F13641 /* SceneDelegate.swift */; };
 		A54096852558496700F13641 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54096842558496700F13641 /* WebViewController.swift */; };
 		A54096882558496700F13641 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54096862558496700F13641 /* Main.storyboard */; };
-		A540968B2558496700F13641 /* browser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A54096892558496700F13641 /* browser.xcdatamodeld */; };
 		A540968D2558496A00F13641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A540968C2558496A00F13641 /* Assets.xcassets */; };
 		A54096902558496A00F13641 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A540968E2558496A00F13641 /* LaunchScreen.storyboard */; };
 		A540969B2558496B00F13641 /* browserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A540969A2558496B00F13641 /* browserTests.swift */; };
 		A54096A62558496B00F13641 /* browserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54096A52558496B00F13641 /* browserUITests.swift */; };
 		A54096D0255892FD00F13641 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A54096CF255892FD00F13641 /* WebKit.framework */; };
+		A590378D255DB5D500E8E863 /* CustomBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A590378B255DB5D500E8E863 /* CustomBrowser.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,22 +37,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A540967D2558496700F13641 /* browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = browser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A540967D2558496700F13641 /* CustomBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54096802558496700F13641 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A54096822558496700F13641 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A54096842558496700F13641 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A54096872558496700F13641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A540968A2558496700F13641 /* browser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = browser.xcdatamodel; sourceTree = "<group>"; };
 		A540968C2558496A00F13641 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A540968F2558496A00F13641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A54096912558496A00F13641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A54096962558496B00F13641 /* browserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = browserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A54096962558496B00F13641 /* CustomBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A540969A2558496B00F13641 /* browserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = browserTests.swift; sourceTree = "<group>"; };
 		A540969C2558496B00F13641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A54096A12558496B00F13641 /* browserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = browserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A54096A12558496B00F13641 /* CustomBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54096A52558496B00F13641 /* browserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = browserUITests.swift; sourceTree = "<group>"; };
 		A54096A72558496B00F13641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A54096CF255892FD00F13641 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		A590378C255DB5D500E8E863 /* CustomBrowser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CustomBrowser.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 		A54096742558496700F13641 = {
 			isa = PBXGroup;
 			children = (
-				A540967F2558496700F13641 /* browser */,
+				A540967F2558496700F13641 /* CustomBrowser */,
 				A54096992558496B00F13641 /* browserTests */,
 				A54096A42558496B00F13641 /* browserUITests */,
 				A540967E2558496700F13641 /* Products */,
@@ -95,26 +95,26 @@
 		A540967E2558496700F13641 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A540967D2558496700F13641 /* browser.app */,
-				A54096962558496B00F13641 /* browserTests.xctest */,
-				A54096A12558496B00F13641 /* browserUITests.xctest */,
+				A540967D2558496700F13641 /* CustomBrowser.app */,
+				A54096962558496B00F13641 /* CustomBrowserTests.xctest */,
+				A54096A12558496B00F13641 /* CustomBrowserUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A540967F2558496700F13641 /* browser */ = {
+		A540967F2558496700F13641 /* CustomBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				A54096912558496A00F13641 /* Info.plist */,
 				A54096802558496700F13641 /* AppDelegate.swift */,
 				A54096822558496700F13641 /* SceneDelegate.swift */,
 				A54096842558496700F13641 /* WebViewController.swift */,
-				A54096862558496700F13641 /* Main.storyboard */,
 				A540968C2558496A00F13641 /* Assets.xcassets */,
+				A590378B255DB5D500E8E863 /* CustomBrowser.xcdatamodeld */,
 				A540968E2558496A00F13641 /* LaunchScreen.storyboard */,
-				A54096912558496A00F13641 /* Info.plist */,
-				A54096892558496700F13641 /* browser.xcdatamodeld */,
+				A54096862558496700F13641 /* Main.storyboard */,
 			);
-			path = browser;
+			path = CustomBrowser;
 			sourceTree = "<group>";
 		};
 		A54096992558496B00F13641 /* browserTests */ = {
@@ -146,9 +146,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A540967C2558496700F13641 /* browser */ = {
+		A540967C2558496700F13641 /* CustomBrowser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A54096AA2558496B00F13641 /* Build configuration list for PBXNativeTarget "browser" */;
+			buildConfigurationList = A54096AA2558496B00F13641 /* Build configuration list for PBXNativeTarget "CustomBrowser" */;
 			buildPhases = (
 				A54096792558496700F13641 /* Sources */,
 				A540967A2558496700F13641 /* Frameworks */,
@@ -158,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = browser;
+			name = CustomBrowser;
 			productName = browser;
-			productReference = A540967D2558496700F13641 /* browser.app */;
+			productReference = A540967D2558496700F13641 /* CustomBrowser.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A54096952558496B00F13641 /* browserTests */ = {
+		A54096952558496B00F13641 /* CustomBrowserTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A54096AD2558496B00F13641 /* Build configuration list for PBXNativeTarget "browserTests" */;
+			buildConfigurationList = A54096AD2558496B00F13641 /* Build configuration list for PBXNativeTarget "CustomBrowserTests" */;
 			buildPhases = (
 				A54096922558496B00F13641 /* Sources */,
 				A54096932558496B00F13641 /* Frameworks */,
@@ -176,14 +176,14 @@
 			dependencies = (
 				A54096982558496B00F13641 /* PBXTargetDependency */,
 			);
-			name = browserTests;
+			name = CustomBrowserTests;
 			productName = browserTests;
-			productReference = A54096962558496B00F13641 /* browserTests.xctest */;
+			productReference = A54096962558496B00F13641 /* CustomBrowserTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A54096A02558496B00F13641 /* browserUITests */ = {
+		A54096A02558496B00F13641 /* CustomBrowserUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A54096B02558496B00F13641 /* Build configuration list for PBXNativeTarget "browserUITests" */;
+			buildConfigurationList = A54096B02558496B00F13641 /* Build configuration list for PBXNativeTarget "CustomBrowserUITests" */;
 			buildPhases = (
 				A540969D2558496B00F13641 /* Sources */,
 				A540969E2558496B00F13641 /* Frameworks */,
@@ -194,9 +194,9 @@
 			dependencies = (
 				A54096A32558496B00F13641 /* PBXTargetDependency */,
 			);
-			name = browserUITests;
+			name = CustomBrowserUITests;
 			productName = browserUITests;
-			productReference = A54096A12558496B00F13641 /* browserUITests.xctest */;
+			productReference = A54096A12558496B00F13641 /* CustomBrowserUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A54096782558496700F13641 /* Build configuration list for PBXProject "browser" */;
+			buildConfigurationList = A54096782558496700F13641 /* Build configuration list for PBXProject "CustomBrowser" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -234,9 +234,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A540967C2558496700F13641 /* browser */,
-				A54096952558496B00F13641 /* browserTests */,
-				A54096A02558496B00F13641 /* browserUITests */,
+				A540967C2558496700F13641 /* CustomBrowser */,
+				A54096952558496B00F13641 /* CustomBrowserTests */,
+				A54096A02558496B00F13641 /* CustomBrowserUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A540968B2558496700F13641 /* browser.xcdatamodeld in Sources */,
+				A590378D255DB5D500E8E863 /* CustomBrowser.xcdatamodeld in Sources */,
 				A54096852558496700F13641 /* WebViewController.swift in Sources */,
 				A54096812558496700F13641 /* AppDelegate.swift in Sources */,
 				A54096832558496700F13641 /* SceneDelegate.swift in Sources */,
@@ -301,12 +301,12 @@
 /* Begin PBXTargetDependency section */
 		A54096982558496B00F13641 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A540967C2558496700F13641 /* browser */;
+			target = A540967C2558496700F13641 /* CustomBrowser */;
 			targetProxy = A54096972558496B00F13641 /* PBXContainerItemProxy */;
 		};
 		A54096A32558496B00F13641 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A540967C2558496700F13641 /* browser */;
+			target = A540967C2558496700F13641 /* CustomBrowser */;
 			targetProxy = A54096A22558496B00F13641 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -451,7 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = browser/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CustomBrowser/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -470,7 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = browser/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CustomBrowser/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -500,7 +500,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/browser.app/browser";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomBrowser.app/CustomBrowser";
 			};
 			name = Debug;
 		};
@@ -521,7 +521,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/browser.app/browser";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomBrowser.app/CustomBrowser";
 			};
 			name = Release;
 		};
@@ -566,7 +566,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A54096782558496700F13641 /* Build configuration list for PBXProject "browser" */ = {
+		A54096782558496700F13641 /* Build configuration list for PBXProject "CustomBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A54096A82558496B00F13641 /* Debug */,
@@ -575,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A54096AA2558496B00F13641 /* Build configuration list for PBXNativeTarget "browser" */ = {
+		A54096AA2558496B00F13641 /* Build configuration list for PBXNativeTarget "CustomBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A54096AB2558496B00F13641 /* Debug */,
@@ -584,7 +584,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A54096AD2558496B00F13641 /* Build configuration list for PBXNativeTarget "browserTests" */ = {
+		A54096AD2558496B00F13641 /* Build configuration list for PBXNativeTarget "CustomBrowserTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A54096AE2558496B00F13641 /* Debug */,
@@ -593,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A54096B02558496B00F13641 /* Build configuration list for PBXNativeTarget "browserUITests" */ = {
+		A54096B02558496B00F13641 /* Build configuration list for PBXNativeTarget "CustomBrowserUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A54096B12558496B00F13641 /* Debug */,
@@ -605,13 +605,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A54096892558496700F13641 /* browser.xcdatamodeld */ = {
+		A590378B255DB5D500E8E863 /* CustomBrowser.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A540968A2558496700F13641 /* browser.xcdatamodel */,
+				A590378C255DB5D500E8E863 /* CustomBrowser.xcdatamodel */,
 			);
-			currentVersion = A540968A2558496700F13641 /* browser.xcdatamodel */;
-			path = browser.xcdatamodeld;
+			currentVersion = A590378C255DB5D500E8E863 /* CustomBrowser.xcdatamodel */;
+			path = CustomBrowser.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
