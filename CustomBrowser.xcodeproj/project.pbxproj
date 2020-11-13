@@ -16,7 +16,9 @@
 		A540969B2558496B00F13641 /* browserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A540969A2558496B00F13641 /* browserTests.swift */; };
 		A54096A62558496B00F13641 /* browserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54096A52558496B00F13641 /* browserUITests.swift */; };
 		A54096D0255892FD00F13641 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A54096CF255892FD00F13641 /* WebKit.framework */; };
-		A590378D255DB5D500E8E863 /* CustomBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A590378B255DB5D500E8E863 /* CustomBrowser.xcdatamodeld */; };
+		A55E8B1D255E001500C69F54 /* CustomBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A590378B255DB5D500E8E863 /* CustomBrowser.xcdatamodeld */; };
+		A59037B5255DCC2500E8E863 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59037B4255DCC2500E8E863 /* HistoryViewController.swift */; };
+		A59037BA255DD42B00E8E863 /* HistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59037B9255DD42B00E8E863 /* HistoryViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		A54096A72558496B00F13641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A54096CF255892FD00F13641 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A590378C255DB5D500E8E863 /* CustomBrowser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CustomBrowser.xcdatamodel; sourceTree = "<group>"; };
+		A59037B4255DCC2500E8E863 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		A59037B9255DD42B00E8E863 /* HistoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 			children = (
 				A54096912558496A00F13641 /* Info.plist */,
 				A54096802558496700F13641 /* AppDelegate.swift */,
+				A59037B9255DD42B00E8E863 /* HistoryViewCell.swift */,
+				A59037B4255DCC2500E8E863 /* HistoryViewController.swift */,
 				A54096822558496700F13641 /* SceneDelegate.swift */,
 				A54096842558496700F13641 /* WebViewController.swift */,
 				A540968C2558496A00F13641 /* Assets.xcassets */,
@@ -273,10 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A590378D255DB5D500E8E863 /* CustomBrowser.xcdatamodeld in Sources */,
 				A54096852558496700F13641 /* WebViewController.swift in Sources */,
+				A55E8B1D255E001500C69F54 /* CustomBrowser.xcdatamodeld in Sources */,
 				A54096812558496700F13641 /* AppDelegate.swift in Sources */,
+				A59037B5255DCC2500E8E863 /* HistoryViewController.swift in Sources */,
 				A54096832558496700F13641 /* SceneDelegate.swift in Sources */,
+				A59037BA255DD42B00E8E863 /* HistoryViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +460,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/CustomBrowser/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,7 +479,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/CustomBrowser/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
